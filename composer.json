@@ -1,0 +1,35 @@
+{
+    "name": "alexisribault/omnipay-txpay",
+    "type": "library",
+    "description": "TxPay driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "balanced"
+    ],
+    "homepage": "https://github.com/alexisribault/omnipay-txpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexis Ribault",
+            "email": ""
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Omnipay\\TxPay\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}

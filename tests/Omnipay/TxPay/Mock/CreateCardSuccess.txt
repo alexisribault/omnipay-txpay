@@ -1,0 +1,42 @@
+HTTP/1.1 201 CREATED
+access-control-allow-headers: Content-Type
+access-control-allow-methods: POST, OPTIONS
+access-control-allow-origin: *
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 10:54:37 GMT
+location: http://api-s.balancedpayments.com/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/cards/CC3JhGvAIeDRkwSGib4pkpIP
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM7a56fb00536411e39f2202a1fe53e539
+x-balanced-host: balanced-api-06
+x-balanced-marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+x-balanced-merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+x-balanced-version: 83801c4c60fdb93095d945db35e89fd46265d633
+X-Midlr-Version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSVhQAQhhQEAMCFlVAFEIIFBQCHVAJUQBTBlpcAwdRX1QOBgZIQVYGABtGRlQHBlBQWlMCVA0BDVtQVFFHFUFXAF8RAWs=
+Content-Length: 706
+Connection: keep-alive
+
+{
+  "security_code_check": "passed",
+  "_type": "card",
+  "hash": "c98e7c53d5f396f108c0330bae9906edd038393b57b2e17d37776b8fdde73dd1",
+  "last_four": "5100",
+  "_uris": {},
+  "brand": "MasterCard",
+  "expiration_month": 1,
+  "meta": {},
+  "postal_code": "12345",
+  "country_code": "USA",
+  "id": "CC3JhGvAIeDRkwSGib4pkpIP",
+  "customer": null,
+  "account": null,
+  "postal_code_check": "passed",
+  "name": "Example User",
+  "expiration_year": 2017,
+  "created_at": "2013-11-22T10:54:36.955611Z",
+  "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/cards/CC3JhGvAIeDRkwSGib4pkpIP",
+  "card_type": "mastercard",
+  "is_valid": true,
+  "is_verified": true,
+  "street_address": "123 Billing St Billsville"
+}
