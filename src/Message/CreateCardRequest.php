@@ -18,6 +18,11 @@ class CreateCardRequest extends AbstractRequest
     {
         return $this->endpoint . '/marketplaces/' . $this->getParameter('marketplace') . '/cards';
     }
+    
+        public function createCard(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\TxPay\Message\CreateCardRequest', $parameters);
+    }
 
     /**
      * This makes multiple api calls to get a card that can be charged
