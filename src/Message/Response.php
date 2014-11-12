@@ -27,7 +27,9 @@ class Response extends AbstractResponse
         curl_setopt($ch, CURLOPT_URL, 
             $url
         );
-        $content = curl_exec($ch);
+        $content = json_encode(curl_exec($ch));
+        //$content = curl_getinfo ( $ch );
+        //curl_close($url);
         return $content;
     }
     
