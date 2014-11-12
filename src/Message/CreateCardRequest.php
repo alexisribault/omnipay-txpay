@@ -1,5 +1,5 @@
 <?php
-
+use Omnipay\TxPay\Message\AbstractRequest;
 namespace Omnipay\TxPay\Message;
 
 /**
@@ -17,11 +17,6 @@ class CreateCardRequest extends AbstractRequest
     public function getEndpoint()
     {
         return $this->endpoint . '/marketplaces/' . $this->getParameter('marketplace') . '/cards';
-    }
-    
-        public function createCard(array $parameters = array())
-    {
-        return $this->createRequest('\Omnipay\TxPay\Message\CreateCardRequest', $parameters);
     }
 
     /**
