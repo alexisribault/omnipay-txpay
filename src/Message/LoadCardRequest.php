@@ -13,7 +13,7 @@ class LoadCardRequest extends AbstractRequest
         $data['login'] = "123";
         $data['password'] = "123";
         $data['cardholderID'] = "123";
-         return $data;
+         return $this->httpRequest->request->all(); //$data;
     }
 
       public function sendData($data)
