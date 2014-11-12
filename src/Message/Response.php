@@ -14,7 +14,7 @@ class Response extends AbstractResponse
         return $this->data;
     }
 
-    public function getMessage()
+    /*public function getMessage()
     {
         if (!$this->isSuccessful()) {
             return $this->data['description'];
@@ -52,5 +52,5 @@ class Response extends AbstractResponse
                 'customer' => $this->data['customer']['uri']
             ));
         }
-    }
+    }*/
 }
