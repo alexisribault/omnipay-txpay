@@ -14,6 +14,23 @@ class Response extends AbstractResponse
         return $this->data;
     }
 
+         public function getRedirectUrl()
+    {
+        return $this->getRequest()->getEndpoint();
+    }
+    
+    public function getResponseFromUrl()
+    {
+        $url = $this->getRequest()->getEndpoint();
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, 
+            $url
+        );
+        $content = curl_exec($ch);
+        return $content;
+    }
+    
     public function getMessage()
     {
         if (!$this->isSuccessful()) {
