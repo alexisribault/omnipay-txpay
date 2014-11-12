@@ -15,7 +15,7 @@ class Gateway extends AbstractGateway
 {
     public function getName()
     {
-        return 'Balanced';
+        return 'TxPay';
     }
 
     public function getDefaultParameters()
