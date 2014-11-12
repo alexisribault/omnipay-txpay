@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\Balanced\Message;
+namespace Omnipay\TxPay\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 
