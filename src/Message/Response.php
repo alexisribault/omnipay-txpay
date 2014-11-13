@@ -19,20 +19,6 @@ class Response extends AbstractResponse
         return $this->getRequest()->getEndpoint();
     }
     
-    public function getResponseFromUrl()
-    {
-        $url = $this->getRequest()->getEndpoint();
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, 
-            $url
-        );
-        $content = json_encode(curl_exec($ch));
-        //$content = curl_getinfo ( $ch );
-        //curl_close($url);
-        return $content;
-    }
-    
     public function getMessage()
     {
         if (!$this->isSuccessful()) {
