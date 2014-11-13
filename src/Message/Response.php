@@ -12,7 +12,7 @@ class Response extends AbstractResponse
     public function isSuccessful()
     {
         //return !isset($this->data['ErrorCode']);
-        return $this->data;
+        return $this->data['success'];
     }
 
     public function getMessage()

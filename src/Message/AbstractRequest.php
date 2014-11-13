@@ -19,7 +19,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     public function sendData($data)
     {
 
-       /* $httpRequest = $this->httpClient->createRequest(
+       $httpRequest = $this->httpClient->createRequest(
             $this->getHttpMethod(),
             $this->getEndpoint(),
             null,
@@ -28,10 +28,10 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         $httpResponse = $httpRequest->send();
 
-        return $this->response = new Response($this, $httpResponse->getBody()); // $data or $httpResponse->json());*/
+        return $this->response = new Response($this, $httpResponse->getBody()); // $data or $httpResponse->json());
         
-        $httpResponse = $this->httpClient->post($this->getEndpoint(), null, $data)->send();
-        return $this->response = new Response($this, $httpResponse->json());
+        /*$httpResponse = $this->httpClient->post($this->getEndpoint(), null, $data)->send();
+        return $this->response = new Response($this, $httpResponse->json());*/
     }
 
     
