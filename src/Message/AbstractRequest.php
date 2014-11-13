@@ -16,6 +16,26 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return 'POST';
     }
 
+    public function getPassword()
+    {
+        return $this->getParameter('password');
+    }
+    
+    public function setPassword($value)
+    {
+        return $this->setParameter('password', $value);
+    }
+    
+    public function getLogin()
+    {
+        return $this->getParameter('login');
+    }
+    
+    public function setLogin($value)
+    {
+        return $this->setParameter('login', $value);
+    }
+    
     public function sendData($data)
     {
 
@@ -26,7 +46,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             $data
         );
 
-        $httpResponse = $httpRequest->send();
+        $httpResponse = $httpRequest
+                ->setHeader(getLogin())
+                ->send();
 
         return $this->response = new Response($this, $httpResponse->json()); // $data or $httpResponse->json());
         
