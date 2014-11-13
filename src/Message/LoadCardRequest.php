@@ -15,11 +15,6 @@ class LoadCardRequest extends AbstractRequest
         $data['cardholderID'] = "123";
          return $data;
     }
-
-      public function sendData($data)
-    {
-        return $this->response = new Response($this, $data);
-    }
     
     public function getEndpoint()
     {

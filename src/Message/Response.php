@@ -11,14 +11,9 @@ class Response extends AbstractResponse
 {
     public function isSuccessful()
     {
-        return $this->data;
+        return !isset($this->data['ErrorCode']);
     }
 
-         public function getRedirectUrl()
-    {
-        return $this->getRequest()->getEndpoint();
-    }
-    
     public function getMessage()
     {
         if (!$this->isSuccessful()) {
@@ -29,7 +24,7 @@ class Response extends AbstractResponse
     public function getErrorCode()
     {
         if (!$this->isSuccessful()) {
-            return $this->data['category_code'];
+            return $this->data['ErrorCode'];
         }
     }
 
