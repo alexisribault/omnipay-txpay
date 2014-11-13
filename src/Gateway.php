@@ -7,9 +7,9 @@ use Omnipay\TxPay\Message\LoadCardRequest;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * Balanced Gateway
+ * TxPay Gateway
  *
- * @link https://balanced.com/docs/api
+ * @link 
  */
 class Gateway extends AbstractGateway
 {
@@ -21,26 +21,45 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'apiKey' => '',
-            'marketplace' => ''
+            'password' => '',
+            'login' => '',
+            'cardHolderID' => ''
         );
     }
-
-    public function getApiKey()
-    {
-        return $this->getParameter('apiKey');
-    }
-
-    public function setApiKey($value)
-    {
-        return $this->setParameter('apiKey', $value);
-    }
-
  
+    public function getPassword()
+    {
+        return $this->getParameter('password');
+    }
+    
+    public function setPassword($value)
+    {
+        return $this->setParameter('password', $value);
+    }
+    
+    public function getLogin()
+    {
+        return $this->getParameter('login');
+    }
+    
+    public function setLogin($value)
+    {
+        return $this->setParameter('login', $value);
+    }
 
+    public function getCardholderID()
+    {
+        return $this->getParameter('cardHolderID');
+    }
+    
+    public function setCardholderID($value)
+    {
+        return $this->setParameter('cardHolderID', $value);
+    }
+    
     /**
      * @param array $parameters
-     * @return PurchaseRequest
+     * @return \Omnipay\TxPay\Message\LoadCardRequest
      */
     public function loadCard(array $parameters = array())
     {

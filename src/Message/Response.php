@@ -11,7 +11,8 @@ class Response extends AbstractResponse
 {
     public function isSuccessful()
     {
-        return !isset($this->data['ErrorCode']);
+        //return !isset($this->data['ErrorCode']);
+        return $this->data;
     }
 
     public function getMessage()
